@@ -2,6 +2,7 @@ require "GlobalVariables"
 require "MessageDispatchCenter"
 require "Helper"
 require "AttackCommand"
+require "math.MathHelper"
 
 local file = "model/slime/slime.c3b"
 
