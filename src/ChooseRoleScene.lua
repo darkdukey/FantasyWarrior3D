@@ -156,6 +156,8 @@ function ChooseRoleScene:addBk()
 	local bk = cc.Sprite:create("chooseRole/cr_bk.jpg")
     bk:setAnchorPoint(0.5,0.5)
     bk:setPosition(self.origin.x + self.visibleSize.width/2, self.origin.y + self.visibleSize.height/2)
+    bk:setPositionZ(-250)
+    bk:setScale(1.5)
     self.layer:addChild(bk)
 end
 

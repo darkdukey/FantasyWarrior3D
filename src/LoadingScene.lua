@@ -2,7 +2,7 @@ require "Cocos2d"
 require "Cocos2dConstants"
 require "ParticleManager"
 require "Slime"
-require "GuiConstants.lua"
+require "GuiConstants"
 
 local LoadingScene = class("loadingScene",
 function ()
