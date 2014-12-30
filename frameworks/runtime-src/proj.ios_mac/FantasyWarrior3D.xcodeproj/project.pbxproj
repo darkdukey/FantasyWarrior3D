@@ -67,8 +67,6 @@
 		15D1FE051998714100302043 /* DeprecatedOpenglEnum.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF01998714100302043 /* DeprecatedOpenglEnum.lua */; };
 		15D1FE061998714100302043 /* DrawPrimitives.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF11998714100302043 /* DrawPrimitives.lua */; };
 		15D1FE071998714100302043 /* DrawPrimitives.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF11998714100302043 /* DrawPrimitives.lua */; };
-		15D1FE081998714100302043 /* extern.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF21998714100302043 /* extern.lua */; };
-		15D1FE091998714100302043 /* extern.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF21998714100302043 /* extern.lua */; };
 		15D1FE0A1998714100302043 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF31998714100302043 /* json.lua */; };
 		15D1FE0B1998714100302043 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF31998714100302043 /* json.lua */; };
 		15D1FE0C1998714100302043 /* luaj.lua in Resources */ = {isa = PBXBuildFile; fileRef = 15D1FDF41998714100302043 /* luaj.lua */; };
@@ -145,6 +143,8 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
+		591FE7AF1A533C070001B3B1 /* extern.lua in Resources */ = {isa = PBXBuildFile; fileRef = 591FE7AE1A533C070001B3B1 /* extern.lua */; };
+		591FE7B01A533C070001B3B1 /* extern.lua in Resources */ = {isa = PBXBuildFile; fileRef = 591FE7AE1A533C070001B3B1 /* extern.lua */; };
 		5980238F1A44D9CF00244BF0 /* ltn12.lua in Resources */ = {isa = PBXBuildFile; fileRef = 598023841A44D9CF00244BF0 /* ltn12.lua */; };
 		598023901A44D9CF00244BF0 /* ltn12.lua in Resources */ = {isa = PBXBuildFile; fileRef = 598023841A44D9CF00244BF0 /* ltn12.lua */; };
 		598023911A44D9CF00244BF0 /* mime.lua in Resources */ = {isa = PBXBuildFile; fileRef = 598023851A44D9CF00244BF0 /* mime.lua */; };
@@ -294,7 +294,6 @@
 		15D1FDEF1998714100302043 /* DeprecatedCocos2dFunc.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DeprecatedCocos2dFunc.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/DeprecatedCocos2dFunc.lua"; sourceTree = "<group>"; };
 		15D1FDF01998714100302043 /* DeprecatedOpenglEnum.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DeprecatedOpenglEnum.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/DeprecatedOpenglEnum.lua"; sourceTree = "<group>"; };
 		15D1FDF11998714100302043 /* DrawPrimitives.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DrawPrimitives.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/DrawPrimitives.lua"; sourceTree = "<group>"; };
-		15D1FDF21998714100302043 /* extern.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = extern.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/extern.lua"; sourceTree = "<group>"; };
 		15D1FDF31998714100302043 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/json.lua"; sourceTree = "<group>"; };
 		15D1FDF41998714100302043 /* luaj.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = luaj.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/luaj.lua"; sourceTree = "<group>"; };
 		15D1FDF51998714100302043 /* luaoc.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = luaoc.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/luaoc.lua"; sourceTree = "<group>"; };
@@ -377,6 +376,7 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		591FE7AE1A533C070001B3B1 /* extern.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = extern.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/cocos2d/extern.lua"; sourceTree = "<group>"; };
 		598023841A44D9CF00244BF0 /* ltn12.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ltn12.lua; path = "../../cocos2d-x/external/lua/luasocket/script/ltn12.lua"; sourceTree = "<group>"; };
 		598023851A44D9CF00244BF0 /* mime.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mime.lua; path = "../../cocos2d-x/external/lua/luasocket/script/mime.lua"; sourceTree = "<group>"; };
 		598023871A44D9CF00244BF0 /* ftp.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ftp.lua; sourceTree = "<group>"; };
@@ -478,6 +478,7 @@
 		1A0227A417A3AA1A00B867AD /* Lua Common */ = {
 			isa = PBXGroup;
 			children = (
+				591FE7AE1A533C070001B3B1 /* extern.lua */,
 				598023841A44D9CF00244BF0 /* ltn12.lua */,
 				598023851A44D9CF00244BF0 /* mime.lua */,
 				598023861A44D9CF00244BF0 /* socket */,
@@ -511,7 +512,6 @@
 				15D1FDEF1998714100302043 /* DeprecatedCocos2dFunc.lua */,
 				15D1FDF01998714100302043 /* DeprecatedOpenglEnum.lua */,
 				15D1FDF11998714100302043 /* DrawPrimitives.lua */,
-				15D1FDF21998714100302043 /* extern.lua */,
 				15D1FDF31998714100302043 /* json.lua */,
 				15D1FDF41998714100302043 /* luaj.lua */,
 				15D1FDF51998714100302043 /* luaoc.lua */,
@@ -897,6 +897,7 @@
 				598023961A44D9CF00244BF0 /* headers.lua in Resources */,
 				152A345F199CE5A7004B68DC /* DeprecatedCocoStudioClass.lua in Resources */,
 				15AA9635199B525400725633 /* DeprecatedNetworkEnum.lua in Resources */,
+				591FE7B01A533C070001B3B1 /* extern.lua in Resources */,
 				152A346B199CE5B9004B68DC /* DeprecatedExtensionEnum.lua in Resources */,
 				152A3475199CE5CE004B68DC /* DeprecatedUIEnum.lua in Resources */,
 				152A3435199CE585004B68DC /* DeprecatedCocosBuilderClass.lua in Resources */,
@@ -929,7 +930,6 @@
 				5980239C1A44D9CF00244BF0 /* smtp.lua in Resources */,
 				598023921A44D9CF00244BF0 /* mime.lua in Resources */,
 				15AA9639199B525400725633 /* NetworkConstants.lua in Resources */,
-				15D1FE091998714100302043 /* extern.lua in Resources */,
 				15AA9637199B525400725633 /* DeprecatedNetworkFunc.lua in Resources */,
 				15D1FE1A1998715500302043 /* DeprecatedCocosDenshionClass.lua in Resources */,
 				C05D1C131923449100B808A4 /* config.json in Resources */,
@@ -964,6 +964,7 @@
 				5091733617ECE17A00D62437 /* Icon-29.png in Resources */,
 				15D1FE061998714100302043 /* DrawPrimitives.lua in Resources */,
 				15D1FE191998715500302043 /* DeprecatedCocosDenshionClass.lua in Resources */,
+				591FE7AF1A533C070001B3B1 /* extern.lua in Resources */,
 				152A3476199CE5CE004B68DC /* DeprecatedUIFunc.lua in Resources */,
 				15D1FDFA1998714100302043 /* Cocos2d.lua in Resources */,
 				5023811917EBBCAC00990C9B /* Default-568h@2x.png in Resources */,
@@ -997,7 +998,6 @@
 				C03781BB18BF655400FE4F13 /* src in Resources */,
 				15AA9636199B525400725633 /* DeprecatedNetworkFunc.lua in Resources */,
 				5091733817ECE17A00D62437 /* Icon-50.png in Resources */,
-				15D1FE081998714100302043 /* extern.lua in Resources */,
 				5023812117EBBCAC00990C9B /* Icon-72.png in Resources */,
 				5980239B1A44D9CF00244BF0 /* smtp.lua in Resources */,
 				15D1FDFC1998714100302043 /* Cocos2dConstants.lua in Resources */,

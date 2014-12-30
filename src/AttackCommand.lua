@@ -171,8 +171,8 @@ function MageNormalAttack.create(pos,facing,attackInfo, target, owner)
 end
 
 function MageNormalAttack:onTimeOut()
-    self.part1:stopSystem()
-    self.part2:stopSystem()
+--    self.part1:stopSystem()
+--    self.part2:stopSystem()
     self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.RemoveSelf:create()))
     
     local magic = cc.ParticleSystemQuad:create(ParticleManager:getInstance():getPlistData("magic"))
