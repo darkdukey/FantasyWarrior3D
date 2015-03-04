@@ -77,7 +77,7 @@ function BattlefieldUI:bloodbarInit()
     self.KnightBloodClone:setPosition3D(cc.V3(self.KnightPng:getPositionX()-1, self.KnightPng:getPositionY()-offset,3))
     self.KnightBloodClone:setScale(scale)
     self:addChild(self.KnightBloodClone,3)
-        
+
     self.ArcherBlood = cc.ProgressTimer:create(cc.Sprite:createWithSpriteFrameName("UI-1136-640_36_clone.png"))
     self.ArcherBlood:setColor(cc.c3b(149,254,26))
     self.ArcherBlood:setType(cc.PROGRESS_TIMER_TYPE_BAR)
@@ -302,16 +302,23 @@ function BattlefieldUI:heroDead(hero)
         cc.GreyShader:setGreyShader(self.KnightPngFrame)    
         self.KnightAngryFullSignal:setVisible(false)   
         self.KnightAngryClone:setVisible(false)
+        self.KnightAlive = false;
     elseif hero._name =="Mage" then
         cc.GreyShader:setGreyShader(self.MagePng)
         cc.GreyShader:setGreyShader(self.MagePngFrame)
         self.MageAngryFullSignal:setVisible(false)
         self.MageAngryClone:setVisible(false)
+        self.MageAlive = false;
     elseif hero._name=="Archer" then
         cc.GreyShader:setGreyShader(self.ArcherPng)
         cc.GreyShader:setGreyShader(self.ArcherPngFrame)
         self.ArcherAngryFullSignal:setVisible(false)
-        self.ArcherAngryClone:setVisible(false)                
+        self.ArcherAngryClone:setVisible(false)
+        self.ArcherAlive = false;                
+    end
+    
+    if self.KnightAlive == false and self.MageAlive == false and self.ArcherAlive == false then
+        delayExecute(self, restart, 1)
     end
 end
 
@@ -382,6 +389,20 @@ function BattlefieldUI:timeInit()
     self._tmSchedule = cc.Director:getInstance():getScheduler():scheduleScriptFunc(tmUpdate,1,false)
 end
 
+function BattlefieldUI:restart()
+    self.KnightAlive = true
+    self.MageAlive = true
+    self.ArcherAlive = true
+    --stop schedule
+    cc.Director:getInstance():getScheduler():unscheduleScriptEntry(self._tmSchedule)
+    cc.Director:getInstance():getScheduler():unscheduleScriptEntry(gameControllerScheduleID)
+    --stop sound
+    ccexp.AudioEngine:stop(AUDIO_ID.BATTLEFIELDBGM)
+    --replace scene
+    local scene = require("ChooseRoleScene"):create()
+    cc.Director:getInstance():replaceScene(scene)
+end
+
 function BattlefieldUI:showVictoryUI()
     --diable AI
 
@@ -405,13 +426,7 @@ function BattlefieldUI:showVictoryUI()
         return true
     end
     local function onTouchEnded(touch,event)
-        --stop schedule
-        cc.Director:getInstance():getScheduler():unscheduleScriptEntry(self._tmSchedule)
-        cc.Director:getInstance():getScheduler():unscheduleScriptEntry(gameControllerScheduleID)
-        --stop sound
-        ccexp.AudioEngine:stop(AUDIO_ID.BATTLEFIELDBGM)
-        --replace scene
-        cc.Director:getInstance():replaceScene(require("ChooseRoleScene"):create())
+        self:restart()
     end
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
